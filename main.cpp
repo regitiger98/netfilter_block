@@ -68,7 +68,7 @@ bool Check_pkt(unsigned char *data)
 	
 	for(int i = 0; i < tcp_data_len; i++)
 	{
-		if(!memcmp(tcp_data + i, "Host: ", 5))
+		if(!memcmp(tcp_data + i, "Host: ", 6))
 		{
 			if(!memcmp(tcp_data + i + 6, host, strlen(host)))
 				return true;
